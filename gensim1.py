@@ -28,11 +28,17 @@ def nltk_remove_stopwords(words):
     filtered_words = [word for word in words if word.lower() not in stop_words]
     return filtered_words
 
-# Main function for user interaction
+# Predefined paragraph
+paragraph = """
+Natural language processing (NLP) is a field of artificial intelligence (AI) that focuses on the interaction between computers and humans through natural language. The ultimate goal of NLP is to enable computers to understand, interpret, and generate human language in a way that is both meaningful and useful. Techniques in NLP often involve tasks such as text analysis, sentiment analysis, machine translation, and more. With advances in machine learning and deep learning, NLP has become increasingly sophisticated and integral to many applications in technology and industry.
+"""
+
+# Main function for processing
 def main():
     print("Welcome to Text Processing with NLTK and Gensim!")
-    print("Enter the text you want to process:")
-    text = input()
+    
+    # Use predefined paragraph
+    text = paragraph
     
     # NLTK tokenization
     words_nltk = nltk_tokenization(text)
